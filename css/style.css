@@ -14,7 +14,7 @@ body {
 }
 
 h3 {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .container {
@@ -30,6 +30,8 @@ img {
 
 .left {
     width: 35%;
+    border-right: 1px solid rgb(180, 180, 180);
+    /* da rimuovere */
     background-color: lightsalmon;
 }
 
@@ -44,23 +46,73 @@ img {
     background-color: #eaeaea;
 }
 
-.left-user,
-.right-user {
+.header-left .left-user,
+.header-right .right-user {
     display: flex;
     align-items: center;
 }
 
-.left-user h3,
-.right-user h3 {
+.header-left .left-user h3,
+.header-right .right-user h3 {
     margin-left: 10px;
 }
 
-.left-icons i,
-.right-icons i {
+.header-left .left-icons i,
+.header-right .right-icons i {
     margin-left: 15px;
     font-size: 20px;
     color: #b1b1b1;
+    cursor: pointer;
 }
+
+.left-notify {
+    padding: 13px;
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+}
+
+.left-notify .notify-logo {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    color: #8edafc;
+}
+
+.left-notify .notify-text span {
+    font-size: 13px;
+    color: grey;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+.left-notify .notify-text h3 {
+    margin-left: 10px;
+}
+
+.left-search {
+    background-color: #fafafa;
+    padding: 8px;
+}
+
+.left-search input {
+    width: 100%; 
+    height: 30px;
+    padding-left: 40px;
+    border: none;
+    outline: none;
+    background: url('https://library.kissclipart.com/20181004/eeq/kissclipart-search-icon-transparent-png-clipart-computer-icons-31410efa021f75cc.jpg') 2% 55% no-repeat;
+    background-size: 20px;
+}
+
+
+
+
+
+
 
 .right {
     width: 65%;
