@@ -21,13 +21,13 @@ h3 {
 .container {
     height: 100%;
     min-width: 950px;
-    max-width: 1300px;
+    max-width: 80%;
     margin: auto;
     display: flex;
 }
 
 img {
-    height: 55px;
+    height: 60px;
     border-radius: 50%;
 }   
 
@@ -61,6 +61,11 @@ img {
     cursor: pointer;
 }
 
+.header-left .left-icons i:hover,
+.header-right .right-icons i:hover {
+    color: rgb(99, 99, 99);
+}
+
 .left-notify {
     height: 80px;
     padding: 13px;
@@ -87,6 +92,10 @@ img {
     cursor: pointer;
 }
 
+.left-notify .notify-text span:hover {
+    color: rgb(66, 46, 46);
+}
+
 .left-search {
     height: 50px;
     background-color: #eaeaea;
@@ -101,6 +110,7 @@ img {
     outline: none;
     background: #f6f6f6 url('https://library.kissclipart.com/20181004/eeq/kissclipart-search-icon-transparent-png-clipart-computer-icons-31410efa021f75cc.jpg') 2% 55% no-repeat;
     background-size: 20px;
+    border-radius: 5px;
 }
 
 .left-contacts {
@@ -119,8 +129,25 @@ img {
     margin-left: 20px;
 }
 
+.left-contacts .info-contact .text-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-contacts .info-contact .text-contact span {
+    margin-left: 20px;
+    margin-top: 7px;
+    font-size: 13px;
+    color: grey;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .left-contacts .info-contact:hover {
-    background-color: #e0e0e0;
+    background-color: #eaeaea;
     cursor: pointer;
 }
 
