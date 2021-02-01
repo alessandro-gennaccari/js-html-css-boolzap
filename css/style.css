@@ -140,6 +140,7 @@ img {
 
 .right-box-message .right-messages  {
     height: 100%;
+    padding: 5% 10%;
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
 }
@@ -157,6 +158,27 @@ img {
     font-size: 28px;
     color: #6b7376;
     cursor: pointer;
+}
+
+.right-box-message .right-messages .message {
+    margin: 8px;
+    padding: 15px 15px 20px;
+    max-width: 60%;
+    min-width: 40%;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.right-box-message .right-messages .message.sent {
+    background-color: #D5F9BA;
+    float: right;
+    clear: both;
+}
+
+.right-box-message .right-messages .message.received {
+    background-color: white;
+    float: left;
+    clear: both;
 }
 
 .right-input-message input {
