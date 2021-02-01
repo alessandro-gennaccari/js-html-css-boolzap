@@ -18,6 +18,7 @@ h3 {
 }
 
 .container {
+    height: 100%;
     max-width: 1270px;
     margin: auto;
     display: flex;
@@ -108,8 +109,9 @@ img {
     background-size: 20px;
 }
 
-
-
+.left-contacts{
+    background-color: red;
+}
 
 
 
