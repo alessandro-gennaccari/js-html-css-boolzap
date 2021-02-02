@@ -40,7 +40,7 @@ img {
 .header-left,
 .header-right {
     height: 70px;
-    padding: 8px;
+    padding: 10px;
     padding-right: 20px;
     display: flex;
     justify-content: space-between;
@@ -92,6 +92,11 @@ img {
     border-radius: 50%;
     background-color: white;
     color: #8edafc;
+    margin-right: 20px;
+}
+
+.left-notify .notify-text {
+    line-height: 25px;
 }
 
 .left-notify .notify-text span {
@@ -208,12 +213,12 @@ img {
 .right-box-message .right-messages .message {
     margin: 8px;
     padding: 17px 25px 20px;
-    max-width: 60%;
+    max-width: 55%;
     min-width: 40%;
     border-radius: 10px;
     font-size: 15px;
     position: relative;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .right-box-message .right-messages .message small {
@@ -227,7 +232,7 @@ img {
 
 .right-box-message .right-messages .message i{
     position: absolute;
-    top: 8%;
+    top: 11%;
     right: 3%;
     color: rgb(163, 163, 163);
     cursor: pointer;
