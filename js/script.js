@@ -9,6 +9,7 @@ var app = new Vue({
     el: '#app',
     data: {
         newMessage: '',
+        searchName: '',
         user: [
             {
                 name: 'Alessandra',
@@ -24,6 +25,7 @@ var app = new Vue({
                 visible: true,
                 class:'active',
                 stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
+                visibleUser: true,
                 messages: [
                     {
                         date: '02 / 02 / 2021',
@@ -57,6 +59,7 @@ var app = new Vue({
                 visible: false,
                 class: '',
                 stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
+                visibleUser: true,
                 messages: [
                     {
                         date: '20 / 01 / 2021',
@@ -84,6 +87,7 @@ var app = new Vue({
                 visible: false,
                 class: '',
                 stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
+                visibleUser: true,
                 messages: [
                     {
                         date: '28 / 01 / 2021',
@@ -112,6 +116,7 @@ var app = new Vue({
                 visible: false,
                 class: '',
                 stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
+                visibleUser: true,
                 messages: [
                     {
                         date: '10 / 01 / 2021',
@@ -133,6 +138,7 @@ var app = new Vue({
                 visible: false,
                 class: '',
                 stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
+                visibleUser: true,
                 messages: [
                     {
                         date: '09 / 01 / 2021',
@@ -165,36 +171,116 @@ var app = new Vue({
                         status: 'sent'
                     }
                 ]
+            },
+            {
+                name: 'Samanta',
+                avatar: 'img/avatar_6.jpg',
+                visible: false,
+                class: '',
+                stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
+                visibleUser: true,
+                messages: [
+                    {
+                        date: '08 / 01 / 2021',
+                        hour: '08:30',
+                        text: 'Buongiorno Samanta, non dimenticare che oggi pranziamo insieme!!',
+                        status: 'sent'
+                    },
+                    {
+                        date: '08 / 01 / 2021',
+                        hour: '09:53',
+                        text: 'Certamente, me lo ricordo benissimo.',
+                        status: 'received'
+                    },
+                    {
+                        date: '08 / 01 / 2021',
+                        hour: '12:11',
+                        text: 'Perfetto, allora ci vediamo alle 13:30 al ristorante',
+                        status: 'sent'
+                    }
+                ]
+            },
+            {
+                name: 'Luca',
+                avatar: 'img/avatar_7.jpg',
+                visible: false,
+                class: '',
+                stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
+                visibleUser: true,
+                messages: [
+                    {
+                        date: '07 / 01 / 2021',
+                        hour: '12:30',
+                        text: 'Ho finalmente, trovato la bici che agoniavo da tanto!',
+                        status: 'sent'
+                    },
+                    {
+                        date: '07 / 01 / 2021',
+                        hour: '17:53',
+                        text: 'Ovviamnte comrpata subitissimo.',
+                        status: 'sent'
+                    },
+                    {
+                        date: '07 / 01 / 2021',
+                        hour: '19:11',
+                        text: 'Ma sei un grande, organizziamo subito un percorso per domenica.',
+                        status: 'received'
+                    }
+                ]
+            },
+            {
+                name: 'Simone',
+                avatar: 'img/avatar_8.jpg',
+                visible: false,
+                class: '',
+                stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
+                visibleUser: true,
+                messages: [
+                    {
+                        date: '05 / 01 / 2021',
+                        hour: '16:12',
+                        text: 'Stasera allenamento alle 19??',
+                        status: 'received'
+                    },
+                    {
+                        date: '05 / 01 / 2021',
+                        hour: '16:22',
+                        text: 'Fammi sapere quanto prima che ci organizziamo per il passaggio.',
+                        status: 'received'
+                    },
+                    {
+                        date: '05 / 01 / 2021',
+                        hour: '16:23',
+                        text: 'Se non hai la macchina ti vengo a prendere io, tranquillamente.',
+                        status: 'received'
+                    },
+                    {
+                        date: '05 / 01 / 2021',
+                        hour: '17:23',
+                        text: 'Nessun problema, ti passo a prendere mezz\'ora prima ed andiamo',
+                        status: 'sent'
+                    },
+                    {
+                        date: '05 / 01 / 2021',
+                        hour: '17:33',
+                        text: 'Perfetto, portati il cambio che la doccia la facciamo in palestra.',
+                        status: 'received'
+                    },
+                    {
+                        date: '05 / 01 / 2021',
+                        hour: '17:41',
+                        text: 'Va bene, poi ceniamo fuori imamgino.',
+                        status: 'sent'
+                    },
+                    {
+                        date: '05 / 01 / 2021',
+                        hour: '18:04',
+                        text: 'Si, ho gia prenotato in braceria!',
+                        status: 'received'
+                    }
+                ]
             }
-            /* Riduco i contatti per lavorare meglio */
-            // ,
-            // {
-            //     name: 'Samanta',
-            //     avatar: 'img/avatar_6.jpg',
-            //     visible: false,
-            //     class: '',
-            //     messages: [
 
-            //     ]
-            // },
-            // {
-            //     name: 'Luca',
-            //     avatar: 'img/avatar_7.jpg',
-            //     visible: false,
-            //     class: '',
-            //     messages: [
-
-            //     ]
-            // },
-            // {
-            //     name: 'Simone',
-            //     avatar: 'img/avatar_8.jpg',
-            //     visible: false,
-            //     class: '',
-            //     messages: [
-
-            //     ]
-            // }
         ]
     },
     methods: {
@@ -232,7 +318,7 @@ var app = new Vue({
                         element.messages.push({
                             date: dayjs().format('DD / MM / YYYY'),
                             hour: dayjs().format('HH:mm'),
-                            text: 'Ok.',
+                            text: 'Ok',
                             status: 'received'
                         });
                     }, 2500 );
@@ -244,6 +330,18 @@ var app = new Vue({
                 }
 
             })
-        }
+        },
+        serchContact(){
+            this.contacts.filter((element) => {
+
+                if (element.name.toLowerCase().includes(this.searchName.toLowerCase())) {
+                    element.visibleUser = true;
+                } else {
+                    element.visibleUser = false;
+                }
+
+            });
+    
+        },
     }
 });
