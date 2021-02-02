@@ -4,10 +4,9 @@
     box-sizing: border-box;
 }
 
-body {
+.body-dark {
     height: 100vh;
     width: 100%;
-    padding: 25px;
     font-family: 'Lato', sans-serif;
     background-image: linear-gradient(#009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
     overflow: hidden;
@@ -19,12 +18,12 @@ h3 {
 }
 
 .container {
+    padding: 25px 0;
     height: 100%;
     min-width: 950px;
     max-width: 80%;
     margin: auto;
-   display: flex;
-   box-shadow: 0px 0px 5px 1px #5959593f;
+    display: flex;
 }
 
 img {
@@ -58,13 +57,18 @@ img {
 .header-right .right-icons i {
     margin-left: 15px;
     font-size: 20px;
-    color: #b1b1b1;
+    color: #919191;
     cursor: pointer;
 }
 
 .header-left .left-icons i:hover,
 .header-right .right-icons i:hover {
     color: rgb(99, 99, 99);
+}
+
+.header-left .left-user .main-user-info {
+    line-height: 22px;
+    margin-left: 5px;
 }
 
 .header-left .left-user small {
@@ -123,7 +127,7 @@ img {
     padding-left: 40px;
     border: none;
     outline: none;
-    background: #f6f6f6 url('https://library.kissclipart.com/20181004/eeq/kissclipart-search-icon-transparent-png-clipart-computer-icons-31410efa021f75cc.jpg') 2% 55% no-repeat;
+    background: #f6f6f6 url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png') 2% 55% no-repeat;
     background-size: 20px;
     border-radius: 5px;
 }
@@ -131,6 +135,8 @@ img {
 .left-contacts {
     height: calc(100% - 70px - 80px - 50px);
     overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #009688 transparent;
     background-color: white;
 }
 
@@ -177,6 +183,11 @@ img {
     width: 65%;
 }
 
+.right-user .right-user-info {
+    line-height: 22px;
+    margin-left: 10px;
+}
+
 .right-user .right-user-info .last-join {
     font-size: 13px;
     color: grey;
@@ -193,6 +204,8 @@ img {
     padding: 5% 10%;
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #009688 transparent;
 }
 
 .right-input-message {
@@ -206,7 +219,7 @@ img {
 
 .right-input-message i {
     font-size: 28px;
-    color: #6b7376;
+    color: #919191;
     cursor: pointer;
 }
 
@@ -256,6 +269,77 @@ img {
     width: calc(100% - 60px - 50px);
 }
 
+#app button {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
+
 .active {
     background-color: #eaeaea;
+    border-left: 3px solid #009688;
+}
+
+
+/* darkmode */
+.darkmode {
+    background-color: #131c21;
+    color: white;
+}
+
+.body-dark.darkmode {
+    background-image: linear-gradient(#056162 5vh, #000000 15vh, #000000 100%);
+}
+
+.left.darkmode {
+    border-right: 1px solid #30383d;
+}
+
+.left-notify.darkmode {
+    background-color: #085373;
+}
+.left-notify.darkmode .notify-logo i {
+    color: #085373;
+}
+
+.left-search.darkmode input {
+    color: white;
+    background: #323739 url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png') 2% 55% no-repeat;
+    background-size: 20px;
+}
+
+.left-contacts.darkmode {
+    scrollbar-color: #056162 transparent;
+}
+
+.left-contacts.darkmode .info-contact{
+    border-bottom: 1px solid #30383d;
+}
+
+.left-contacts.darkmode .info-contact.active {
+    background-color: #323739;
+}
+
+.left-contacts.darkmode .info-contact:hover {
+    background-color: #323739;
+}
+
+.right-box-message.darkmode .right-messages  {
+    background-image: url('../img/mine_2.png');
+    scrollbar-color: #056162 transparent;   
+}
+
+.right-box-message.darkmode .right-messages .message.sent {
+    background-color: #056162;
+}
+
+.right-box-message.darkmode .right-messages .message.received {
+    background-color: #262d31;
+}
+
+.right-input-message.darkmode input {
+    background-color: #323739;
+    color: white;
+    outline: none;
+    border: none;
 }

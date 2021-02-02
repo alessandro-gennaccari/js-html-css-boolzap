@@ -14,166 +14,171 @@
 </head>
 <body>
 
-    <div id="app" class="container">
+    <div id="app" class="body-dark" :class="dark">
 
-        <div class="left">
-
-            <div class="header-left">
-                
-                <div class="left-user" v-for="item in user">
-                    <img :src="item.avatar" alt="Avatar">
-                    <div>
-                        <h3>{{item.name}}</h3>
-                        <small>
-                            <i class="fas fa-circle"></i>
-                            Online
-                        </small>
-                    </div>
-                </div>
-
-                <div class="left-icons">
-                    <i class="fas fa-circle-notch"></i>
-                    <i class="fas fa-comment-alt"></i>
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-
-            </div>
-
-            <div class="left-notify">
-
-                <div class="notify-logo">
-                    <i class="fas fa-bell-slash"></i>
-                </div>
-
-                <div class="notify-text">
-                    <h3>Ricevi notifiche di nuovi messaggi</h3>
-                    <span>Attiva notifiche desktop</span>
-                </div>
-
-            </div>
-
-            <div class="left-search">
-                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchName" @keyup="serchContact()">
-            </div>
-
-            <div class="left-contacts">
-
-                <div v-if="contact.visibleUser == true" @click="visibleChat(index)" class="info-contact" :class="contact.class" v-for="(contact,index) in contacts">
-                    <img :src="contact.avatar" alt="Avatar">
+        <div class="container">
+    
+            <div class="left" :class="dark">
+    
+                <div class="header-left" :class="dark">
                     
-                    <div class="text-contact">
-                        <h3>{{contact.name}}</h3>
-                        <span v-for="(message,index) in contact.messages" v-if="index == contact.messages.length - 1">
-                            {{message.text}}
-                            <span class="hour">
-                                {{message.hour}}
+                    <div class="left-user" v-for="item in user">
+                        <img :src="item.avatar" alt="Avatar">
+                        <div class="main-user-info">
+                            <h3>{{item.name}}</h3>
+                            <small>
+                                <i class="fas fa-circle"></i>
+                                Online
+                            </small>
+                        </div>
+                    </div>
+    
+                    <div class="left-icons">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-adjust" title="Toggle Dark Mode" @click="toggleDark"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+    
+                </div>
+    
+                <div class="left-notify" :class="dark">
+    
+                    <div class="notify-logo">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+    
+                    <div class="notify-text">
+                        <h3>Ricevi notifiche di nuovi messaggi</h3>
+                        <span>Attiva notifiche desktop</span>
+                    </div>
+    
+                </div>
+    
+                <div class="left-search" :class="dark">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchName" @keyup="serchContact()">
+                </div>
+    
+                <div class="left-contacts" :class="dark">
+    
+                    <div v-if="contact.visibleUser == true" @click="visibleChat(index)" class="info-contact" :class="contact.class" v-for="(contact,index) in contacts">
+                        <img :src="contact.avatar" alt="Avatar">
+                        
+                        <div class="text-contact">
+                            <h3>{{contact.name}}</h3>
+                            <span v-for="(message,index) in contact.messages" v-if="index == contact.messages.length - 1">
+                                {{message.text}}
+                                <span class="hour">
+                                    {{message.hour}}
+                                </span>
                             </span>
-                        </span>
+                        </div>
                     </div>
+    
+                    <!-- <div class="info-contact">
+                        <img src="img/avatar_4.jpg" alt="Avatar">
+                        
+                        <div class="text-contact">
+                            <h3>Fabio</h3>
+                            <span>Giusto qualcosa come testo</span>
+                        </div>
+                    </div>
+    
+                    <div class="info-contact">
+                        <img src="img/avatar_5.jpg" alt="Avatar">
+                        
+                        <div class="text-contact">
+                            <h3>Samuele</h3>
+                            <span>Giusto qualcosa come testo</span>
+                        </div>
+                    </div>
+    
+                    <div class="info-contact">
+                        <img src="img/avatar_6.jpg" alt="Avatar">
+                        
+                        <div class="text-contact">
+                            <h3>Luisa</h3>
+                            <span>Giusto qualcosa come testo</span>
+                        </div>
+                    </div>
+    
+                    <div class="info-contact">
+                        <img src="img/avatar_7.jpg" alt="Avatar">
+                        
+                        <div class="text-contact">
+                            <h3>Marco</h3>
+                            <span>Giusto qualcosa come testo, più testo del normale in anteprima senza andare a capo</span>
+                        </div>
+                    </div>
+    
+                    <div class="info-contact">
+                        <img src="img/avatar_8.jpg" alt="Avatar">
+                        
+                        <div class="text-contact">
+                            <h3>Giacomo</h3>
+                            <span>Giusto qualcosa come testo</span>
+                        </div>
+                    </div>
+    
+                    <div class="info-contact">
+                        <img src="img/avatar_1.jpg" alt="Avatar">
+                        
+                        <div class="text-contact">
+                            <h3>Mario</h3>
+                            <span>Giusto qualcosa come testo</span>
+                        </div>
+                    </div> -->
+    
                 </div>
-
-                <!-- <div class="info-contact">
-                    <img src="img/avatar_4.jpg" alt="Avatar">
-                    
-                    <div class="text-contact">
-                        <h3>Fabio</h3>
-                        <span>Giusto qualcosa come testo</span>
-                    </div>
-                </div>
-
-                <div class="info-contact">
-                    <img src="img/avatar_5.jpg" alt="Avatar">
-                    
-                    <div class="text-contact">
-                        <h3>Samuele</h3>
-                        <span>Giusto qualcosa come testo</span>
-                    </div>
-                </div>
-
-                <div class="info-contact">
-                    <img src="img/avatar_6.jpg" alt="Avatar">
-                    
-                    <div class="text-contact">
-                        <h3>Luisa</h3>
-                        <span>Giusto qualcosa come testo</span>
-                    </div>
-                </div>
-
-                <div class="info-contact">
-                    <img src="img/avatar_7.jpg" alt="Avatar">
-                    
-                    <div class="text-contact">
-                        <h3>Marco</h3>
-                        <span>Giusto qualcosa come testo, più testo del normale in anteprima senza andare a capo</span>
-                    </div>
-                </div>
-
-                <div class="info-contact">
-                    <img src="img/avatar_8.jpg" alt="Avatar">
-                    
-                    <div class="text-contact">
-                        <h3>Giacomo</h3>
-                        <span>Giusto qualcosa come testo</span>
-                    </div>
-                </div>
-
-                <div class="info-contact">
-                    <img src="img/avatar_1.jpg" alt="Avatar">
-                    
-                    <div class="text-contact">
-                        <h3>Mario</h3>
-                        <span>Giusto qualcosa come testo</span>
-                    </div>
-                </div> -->
-
+    
             </div>
-
+    
+            <div class="right">
+    
+                <div :class="dark" class="header-right" v-for="contact in contacts" v-if="contact.visible === true">
+    
+                    <div class="right-user">
+                        <img :src="contact.avatar" alt="Avatar">
+                        <div class="right-user-info">
+                            <h3>{{contact.name}}</h3>
+                            <span class="last-join">{{contact.stato}}</span>
+                        </div>
+                    </div>
+    
+                    <div class="right-icons">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+    
+                </div>
+    
+                <div class="right-box-message" :class="dark">
+    
+                    <div class="right-messages" v-for="contact in contacts" v-if="contact.visible === true">
+    
+                        <div v-for="message in contact.messages" :class="message.status" class="message">
+                            {{message.text}}
+                            <small>{{message.hour}}</small>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        
+                    </div>
+    
+                </div>
+    
+                <div class="right-input-message" :class="dark">
+    
+                    <i class="far fa-smile"></i>
+                    <input @keyup.enter="sendNewMessage" type="text" placeholder="Scrivi un messaggio" v-model="newMessage">
+                    <i class="fas fa-microphone"></i>
+    
+                </div>
+            </div>
+    
         </div>
-
-        <div class="right">
-
-            <div class="header-right" v-for="contact in contacts" v-if="contact.visible === true">
-
-                <div class="right-user">
-                    <img :src="contact.avatar" alt="Avatar">
-                    <div class="right-user-info">
-                        <h3>{{contact.name}}</h3>
-                        <span class="last-join">{{contact.stato}}</span>
-                    </div>
-                </div>
-
-                <div class="right-icons">
-                    <i class="fas fa-search"></i>
-                    <i class="fas fa-paperclip"></i>
-                    <i class="fas fa-ellipsis-v"></i>
-                </div>
-
-            </div>
-
-            <div class="right-box-message">
-
-                <div class="right-messages" v-for="contact in contacts" v-if="contact.visible === true">
-
-                    <div v-for="message in contact.messages" :class="message.status" class="message">
-                        {{message.text}}
-                        <small>{{message.hour}}</small>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    
-                </div>
-
-            </div>
-
-            <div class="right-input-message">
-
-                <i class="far fa-smile"></i>
-                <input @keyup.enter="sendNewMessage" type="text" placeholder="Scrivi un messaggio" v-model="newMessage">
-                <i class="fas fa-microphone"></i>
-
-            </div>
-        </div>
-
     </div>
+
     
     <script src="js/script.js"></script>
 </body>

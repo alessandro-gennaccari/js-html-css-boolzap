@@ -1,3 +1,4 @@
+
 /* Milestone 1
 ● Replica della grafica c on l a possibilità di avere messaggi
 scritti dall’utente (verdi) e
@@ -10,6 +11,7 @@ var app = new Vue({
     data: {
         newMessage: '',
         searchName: '',
+        dark: '',
         user: [
             {
                 name: 'Alessandra',
@@ -343,5 +345,12 @@ var app = new Vue({
             });
     
         },
+        toggleDark(){
+            if (this.dark == ''){
+                this.dark = 'darkmode';
+            } else {
+                this.dark = '';
+            }
+        }
     }
 });
