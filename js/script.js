@@ -176,7 +176,6 @@ var app = new Vue({
         sendNewMessage(){
             this.contacts.forEach((element) => {
                 if (element.visible == true) {
-                    console.log(element.messages);
                     element.messages.push({
                         date: dayjs().format('DD / MM / YYYY'),
                         hour: dayjs().format('HH:mm'),
