@@ -194,6 +194,15 @@ img {
     min-width: 40%;
     border-radius: 10px;
     font-size: 15px;
+    position: relative;
+}
+
+.right-box-message .right-messages .message small {
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+    color: grey;
+    font-size: 10px;
 }
 
 .right-box-message .right-messages .message.sent {
