@@ -24,7 +24,8 @@ var app = new Vue({
                 class:'active',
                 messages: [
                     {
-                        date: '02/02/2021 - 15:30:55',
+                        date: dayjs().format('HH:mm'),
+                        // date: '02/02/2021 - 15:30:55',
                         text: 'Hai portato a spasso il cane?',
                         status: 'sent'
                     },
