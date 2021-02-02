@@ -53,12 +53,12 @@
             </div>
 
             <div class="left-search">
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchName" @keyup="serchContact()">
             </div>
 
             <div class="left-contacts">
 
-                <div @click="visibleChat(index)" class="info-contact" :class="contact.class" v-for="(contact,index) in contacts">
+                <div v-if="contact.visibleUser == true" @click="visibleChat(index)" class="info-contact" :class="contact.class" v-for="(contact,index) in contacts">
                     <img :src="contact.avatar" alt="Avatar">
                     
                     <div class="text-contact">
