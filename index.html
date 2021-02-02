@@ -8,18 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
 
-    <div class="container">
+    <div id="app" class="container">
 
         <div class="left">
 
             <div class="header-left">
                 
-                <div class="left-user">
-                    <img src="img/avatar_2.jpg" alt="Avatar">
-                    <h3>Nome Utente</h3>
+                <div class="left-user" v-for="item in user">
+                    <img :src="item.avatar" alt="Avatar">
+                    <h3>{{item.name}}</h3>
                 </div>
 
                 <div class="left-icons">
@@ -49,16 +50,16 @@
 
             <div class="left-contacts">
 
-                <div class="info-contact">
-                    <img src="img/avatar_3.jpg" alt="Avatar">
+                <div class="info-contact" v-for="contact in contacts">
+                    <img :src="contact.avatar" alt="Avatar">
                     
                     <div class="text-contact">
-                        <h3>Michele</h3>
-                        <span>Scrool</span>
+                        <h3>{{contact.name}}</h3>
+                        <span>Anteprima Ultimo messaggio</span>
                     </div>
                 </div>
 
-                <div class="info-contact">
+                <!-- <div class="info-contact">
                     <img src="img/avatar_4.jpg" alt="Avatar">
                     
                     <div class="text-contact">
@@ -110,7 +111,7 @@
                         <h3>Mario</h3>
                         <span>Giusto qualcosa come testo</span>
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
@@ -121,10 +122,10 @@
             <div class="header-right">
 
                 <div class="right-user">
-                    <img src="img/avatar_3.jpg" alt="Avatar">
+                    <img src="img/avatar_1.jpg" alt="Avatar">
                     <div class="right-user-info">
                         <h3>Michele</h3>
-                        <span class="last-join">Ultimo accesso oggi alle</span>
+                        <span class="last-join">Ultimo accesso oggi alle...</span>
                     </div>
                 </div>
 
@@ -171,5 +172,6 @@
 
     </div>
     
+    <script src="js/script.js"></script>
 </body>
 </html>
