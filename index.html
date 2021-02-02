@@ -141,9 +141,9 @@
 
             <div class="right-box-message">
 
-                <div class="right-messages" v-for="contact in contacts">
+                <div class="right-messages" v-for="contact in contacts" v-if="contact.visible === true">
 
-                    <div v-if="contact.visible === true" v-for="message in contact.messages" :class="message.status" class="message">
+                    <div v-for="message in contact.messages" :class="message.status" class="message">
                         {{message.text}}
                         <small>{{message.date}}</small>
                     </div>
