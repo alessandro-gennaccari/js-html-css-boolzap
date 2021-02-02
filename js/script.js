@@ -27,7 +27,7 @@ var app = new Vue({
                 messages: [
                     {
                         date: '02 / 02 / 2021',
-                        hour: dayjs().format('HH:mm'),
+                        hour: '15:32',
                         text: 'Hai portato a spasso il cane?',
                         status: 'sent'
                     },
@@ -126,18 +126,48 @@ var app = new Vue({
                         status: 'received'
                     }
                 ]
+            },
+            {
+                name: 'Matteo',
+                avatar: 'img/avatar_5.jpg',
+                visible: false,
+                class: '',
+                stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
+                messages: [
+                    {
+                        date: '09 / 01 / 2021',
+                        hour: '12:30',
+                        text: 'Hai provato il gelato della nuova gelateria, quella in corso Pippo?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '09 / 01 / 2021',
+                        hour: '15:50',
+                        text: 'Si, devo dire che non è per nulla buono.',
+                        status: 'received'
+                    },
+                    {
+                        date: '09 / 01 / 2021',
+                        hour: '18:12',
+                        text: 'Caspita, eppure da come appare esteticamente fa un figurone.',
+                        status: 'sent'
+                    },
+                    {
+                        date: '09 / 01 / 2021',
+                        hour: '18:54',
+                        text: 'Non sempre i prodotto sono lo specchio del locale.',
+                        status: 'received'
+                    },
+                    {
+                        date: '09 / 01 / 2021',
+                        hour: '20:24',
+                        text: 'Già, allora lo prendo dalla solita gelateria.',
+                        status: 'sent'
+                    }
+                ]
             }
             /* Riduco i contatti per lavorare meglio */
             // ,
-            // {
-            //     name: 'Matteo',
-            //     avatar: 'img/avatar_5.jpg',
-            //     visible: false,
-            //     class: '',
-            //     messages: [
-
-            //     ]
-            // },
             // {
             //     name: 'Samanta',
             //     avatar: 'img/avatar_6.jpg',
@@ -183,6 +213,7 @@ var app = new Vue({
         },
         sendNewMessage(){
             this.contacts.forEach((element) => {
+
                 if (element.visible == true) {
                     element.messages.push({
                         date: dayjs().format('DD / MM / YYYY'),
@@ -201,7 +232,7 @@ var app = new Vue({
                         element.messages.push({
                             date: dayjs().format('DD / MM / YYYY'),
                             hour: dayjs().format('HH:mm'),
-                            text: 'ok',
+                            text: 'Ok.',
                             status: 'received'
                         });
                     }, 2500 );
@@ -209,7 +240,9 @@ var app = new Vue({
                     setTimeout( function () {
                         element.stato = 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm');
                     }, 4000 );
+
                 }
+
             })
         }
     }
