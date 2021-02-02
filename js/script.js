@@ -23,6 +23,7 @@ var app = new Vue({
                 avatar: 'img/avatar_1.jpg',
                 visible: true,
                 class:'active',
+                stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
                 messages: [
                     {
                         date: '02 / 02 / 2021',
@@ -55,6 +56,7 @@ var app = new Vue({
                 avatar: 'img/avatar_2.jpg',
                 visible: false,
                 class: '',
+                stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
                 messages: [
                     {
                         date: '20 / 01 / 2021',
@@ -81,6 +83,7 @@ var app = new Vue({
                 avatar: 'img/avatar_3.jpg',
                 visible: false,
                 class: '',
+                stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
                 messages: [
                     {
                         date: '28 / 01 / 2021',
@@ -108,6 +111,7 @@ var app = new Vue({
                 avatar: 'img/avatar_4.jpg',
                 visible: false,
                 class: '',
+                stato: 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm'),
                 messages: [
                     {
                         date: '10 / 01 / 2021',
@@ -129,6 +133,7 @@ var app = new Vue({
             //     name: 'Matteo',
             //     avatar: 'img/avatar_5.jpg',
             //     visible: false,
+            //     class: '',
             //     messages: [
 
             //     ]
@@ -137,6 +142,7 @@ var app = new Vue({
             //     name: 'Samanta',
             //     avatar: 'img/avatar_6.jpg',
             //     visible: false,
+            //     class: '',
             //     messages: [
 
             //     ]
@@ -145,6 +151,7 @@ var app = new Vue({
             //     name: 'Luca',
             //     avatar: 'img/avatar_7.jpg',
             //     visible: false,
+            //     class: '',
             //     messages: [
 
             //     ]
@@ -153,6 +160,7 @@ var app = new Vue({
             //     name: 'Simone',
             //     avatar: 'img/avatar_8.jpg',
             //     visible: false,
+            //     class: '',
             //     messages: [
 
             //     ]
@@ -182,7 +190,13 @@ var app = new Vue({
                         text: this.newMessage,
                         status: 'sent'
                     });
+
                     this.newMessage = '';
+
+                    setTimeout( function () {
+                        element.stato = 'Online'
+                    }, 1000 );
+
                     setTimeout( function () {
                         element.messages.push({
                             date: dayjs().format('DD / MM / YYYY'),
@@ -190,7 +204,11 @@ var app = new Vue({
                             text: 'ok',
                             status: 'received'
                         });
-                    }, 1000 );
+                    }, 2500 );
+
+                    setTimeout( function () {
+                        element.stato = 'Ultimo accesso oggi alle ' + dayjs().format('HH:mm');
+                    }, 4000 );
                 }
             })
         }
