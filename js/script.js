@@ -8,6 +8,7 @@ visualizzare nome e immagine di ogni contatto */
 var app = new Vue({
     el: '#app',
     data: {
+        newMessage: '',
         user: [
             {
                 name: 'Alessandra',
@@ -24,23 +25,26 @@ var app = new Vue({
                 class:'active',
                 messages: [
                     {
-                        date: dayjs().format('HH:mm'),
-                        // date: '02/02/2021 - 15:30:55',
+                        date: '02 / 02 / 2021',
+                        hour: dayjs().format('HH:mm'),
                         text: 'Hai portato a spasso il cane?',
                         status: 'sent'
                     },
                     {
-                        date: '02/02/2021 - 15:50:22',
+                        date: '02 / 02 / 2021',
+                        hour: '15:50',
                         text: 'Ricordati di dargli da mangiare.',
                         status: 'sent'
                     },
                     {
-                        date: '02/02/2021 - 16:32:23',
+                        date: '02 / 02 / 2021',
+                        hour: '16:32',
                         text: 'Tutto fatto!',
                         status: 'received'
                     },
                     {
-                        date: '02/02/2021 - 16:36:11',
+                        date: '02 / 02 / 2021',
+                        hour: '16:36',
                         text: 'Grandioso, tra due ore sono a casa.',
                         status: 'sent'
                     }
@@ -53,17 +57,20 @@ var app = new Vue({
                 class: '',
                 messages: [
                     {
-                        date: '20/01/2021 - 16:30:00',
+                        date: '20 / 01 / 2021',
+                        hour: '16:30',
                         text: 'Ciao come stai?',
                         status: 'sent'
                     },
                     {
-                        date: '20/01/2021 - 16:30:55',
+                        date: '20 / 01 / 2021',
+                        hour: '16:30',
                         text: 'Bene grazie! Stasera ci vediamo?',
                         status: 'received'
                     },
                     {
-                        date: '20/01/2021 - 16:35:00',
+                        date: '20 / 01 / 2021',
+                        hour: '16:35',
                         text: 'Mi piacerebbe ma devo andare a fare la spesa.',
                         status: 'sent' 
                     }
@@ -76,17 +83,20 @@ var app = new Vue({
                 class: '',
                 messages: [
                     {
-                        date: '28/01/2021 - 10:10:40',
+                        date: '28 / 01 / 2021',
+                        hour: '10:10',
                         text: 'La Marianna va in campagna',
                         status: 'received'
                     },
                     {
-                        date: '28/01/2021 - 10:20:10',
+                        date: '28 / 01 / 2021',
+                        hour: '10:21',
                         text: 'Sicuro di non aver sbagliato chat?',
                         status: 'sent'
                     },
                     {
-                        date: '28/01/2021 - 16:15:22',
+                        date: '28 / 01 / 2021',
+                        hour: '16:15',
                         text: 'Ah scusa!',
                         status: 'received'
                     }
@@ -100,12 +110,14 @@ var app = new Vue({
                 class: '',
                 messages: [
                     {
-                        date: '10/01/2021 - 15:30:55',
+                        date: '10 / 01 / 2021',
+                        hour: '15:30',
                         text: 'Lo sai che ha aperto una nuova pizzeria?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2021 - 15:50:00',
+                        date: '10 / 01 / 2021',
+                        hour: '15:50',
                         text: 'Si, ma preferirei andare al cinema',
                         status: 'received'
                     }
@@ -160,6 +172,28 @@ var app = new Vue({
                     indice.class = 'active';
                 }
             });
+        },
+        sendNewMessage(){
+            this.contacts.forEach((element) => {
+                if (element.visible == true) {
+                    console.log(element.messages);
+                    element.messages.push({
+                        date: dayjs().format('DD / MM / YYYY'),
+                        hour: dayjs().format('HH:mm'),
+                        text: this.newMessage,
+                        status: 'sent'
+                    });
+                    this.newMessage = '';
+                    setTimeout( function () {
+                        element.messages.push({
+                            date: dayjs().format('DD / MM / YYYY'),
+                            hour: dayjs().format('HH:mm'),
+                            text: 'ok',
+                            status: 'received'
+                        });
+                    }, 1000 );
+                }
+            })
         }
     }
 });
