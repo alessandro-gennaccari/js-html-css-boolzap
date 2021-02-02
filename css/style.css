@@ -23,7 +23,8 @@ h3 {
     min-width: 950px;
     max-width: 80%;
     margin: auto;
-    display: flex;
+   display: flex;
+   box-shadow: 0px 0px 5px 1px #5959593f;
 }
 
 img {
@@ -64,6 +65,15 @@ img {
 .header-left .left-icons i:hover,
 .header-right .right-icons i:hover {
     color: rgb(99, 99, 99);
+}
+
+.header-left .left-user small {
+    font-size: 13px;
+    margin-left: 10px;
+}
+.header-left .left-user small i {
+    color: green;
+    margin-right: 3px;
 }
 
 .left-notify {

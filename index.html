@@ -22,7 +22,13 @@
                 
                 <div class="left-user" v-for="item in user">
                     <img :src="item.avatar" alt="Avatar">
-                    <h3>{{item.name}}</h3>
+                    <div>
+                        <h3>{{item.name}}</h3>
+                        <small>
+                            <i class="fas fa-circle"></i>
+                            Online
+                        </small>
+                    </div>
                 </div>
 
                 <div class="left-icons">
