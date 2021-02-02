@@ -50,7 +50,7 @@
 
             <div class="left-contacts">
 
-                <div class="info-contact" v-for="contact in contacts">
+                <div @click="visibleChat(index)" class="info-contact" :class="contact.class" v-for="(contact,index) in contacts">
                     <img :src="contact.avatar" alt="Avatar">
                     
                     <div class="text-contact">

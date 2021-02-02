@@ -21,6 +21,7 @@ var app = new Vue({
                 name: 'Michele',
                 avatar: 'img/avatar_1.jpg',
                 visible: true,
+                class:'active',
                 messages: [
                     {
                         date: '02/02/2021 - 15:30:55',
@@ -48,6 +49,7 @@ var app = new Vue({
                 name: 'Lorenzo',
                 avatar: 'img/avatar_2.jpg',
                 visible: false,
+                class: '',
                 messages: [
                     {
                         date: '20/01/2021 - 16:30:00',
@@ -70,6 +72,7 @@ var app = new Vue({
                 name: 'Mario',
                 avatar: 'img/avatar_3.jpg',
                 visible: false,
+                class: '',
                 messages: [
                     {
                         date: '28/01/2021 - 10:10:40',
@@ -93,11 +96,12 @@ var app = new Vue({
                 name: 'Gabriele',
                 avatar: 'img/avatar_4.jpg',
                 visible: false,
+                class: '',
                 messages: [
                     {
                         date: '10/01/2021 - 15:30:55',
                         text: 'Lo sai che ha aperto una nuova pizzeria?',
-                        status:   'sent'
+                        status: 'sent'
                     },
                     {
                         date: '10/01/2021 - 15:50:00',
@@ -143,6 +147,18 @@ var app = new Vue({
         ]
     },
     methods: {
+        visibleChat(index) {
 
+            let indice = this.contacts[index];
+
+            this.contacts.forEach((element) => {
+                if(element.visible == true) {
+                    element.visible = false;
+                    element.class = '';
+                    indice.visible = true;
+                    indice.class = 'active';
+                }
+            });
+        }
     }
 });
