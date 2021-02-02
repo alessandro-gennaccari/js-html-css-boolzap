@@ -207,6 +207,15 @@ img {
     font-size: 10px;
 }
 
+
+.right-box-message .right-messages .message i{
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    color: rgb(163, 163, 163);
+    cursor: pointer;
+}
+
 .right-box-message .right-messages .message.sent {
     background-color: #D5F9BA;
     float: right;
