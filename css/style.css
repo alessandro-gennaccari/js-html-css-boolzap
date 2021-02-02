@@ -123,6 +123,7 @@ img {
     padding: 10px;
     display: flex;
     border-bottom: 1px solid #eaeaea;
+    position: relative;
 }
 
 .left-contacts .info-contact h3 {
@@ -135,7 +136,7 @@ img {
     justify-content: center;
 }
 
-.left-contacts .info-contact .text-contact span {
+.left-contacts .info-contact .text-contact > span {
     margin-left: 20px;
     margin-top: 7px;
     font-size: 13px;
@@ -144,6 +145,12 @@ img {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.left-contacts .info-contact .text-contact span.hour {
+    position: absolute;
+    top: 20%;
+    right: 4%;
 }
 
 .left-contacts .info-contact:hover {
@@ -190,7 +197,7 @@ img {
 
 .right-box-message .right-messages .message {
     margin: 8px;
-    padding: 15px 15px 23px;
+    padding: 17px 25px 20px;
     max-width: 60%;
     min-width: 40%;
     border-radius: 10px;
@@ -210,8 +217,8 @@ img {
 
 .right-box-message .right-messages .message i{
     position: absolute;
-    top: 10%;
-    right: 2%;
+    top: 8%;
+    right: 3%;
     color: rgb(163, 163, 163);
     cursor: pointer;
 }

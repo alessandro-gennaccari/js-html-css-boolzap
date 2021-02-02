@@ -59,6 +59,9 @@
                         <h3>{{contact.name}}</h3>
                         <span v-for="(message,index) in contact.messages" v-if="index == contact.messages.length - 1">
                             {{message.text}}
+                            <span class="hour">
+                                {{message.hour}}
+                            </span>
                         </span>
                     </div>
                 </div>
@@ -147,7 +150,7 @@
 
                     <div v-for="message in contact.messages" :class="message.status" class="message">
                         {{message.text}}
-                        <small>{{message.date}}</small>
+                        <small>{{message.hour}}</small>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     
@@ -158,7 +161,7 @@
             <div class="right-input-message">
 
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input @keyup.enter="sendNewMessage" type="text" placeholder="Scrivi un messaggio" v-model="newMessage">
                 <i class="fas fa-microphone"></i>
 
             </div>
