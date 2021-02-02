@@ -34,10 +34,10 @@
                     </div>
     
                     <div class="left-icons">
-                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-circle-notch" title="Stato"></i>
                         <i class="fas fa-adjust" title="Toggle Dark Mode" @click="toggleDark"></i>
-                        <i class="fas fa-comment-alt"></i>
-                        <i class="fas fa-ellipsis-v"></i>
+                        <i class="fas fa-comment-alt" title="Nuova chat"></i>
+                        <i class="fas fa-ellipsis-v" title="Menu"></i>
                     </div>
     
                 </div>
@@ -146,9 +146,9 @@
                     </div>
     
                     <div class="right-icons">
-                        <i class="fas fa-search"></i>
-                        <i class="fas fa-paperclip"></i>
-                        <i class="fas fa-ellipsis-v"></i>
+                        <i class="fas fa-search" title="Cerca..."></i>
+                        <i class="fas fa-paperclip" title="Allega"></i>
+                        <i class="fas fa-ellipsis-v" title="Menu"></i>
                     </div>
     
                 </div>
@@ -159,6 +159,8 @@
     
                         <div v-for="message in contact.messages" :class="message.status" class="message">
                             {{message.text}}
+                            <h5 class="user-sent" v-if="message.status == 'sent'">Tu</h5>
+                            <h5 v-if="message.status == 'received'">{{contact.name}}</h5>
                             <small>{{message.hour}}</small>
                             <i class="fas fa-chevron-down"></i>
                         </div>

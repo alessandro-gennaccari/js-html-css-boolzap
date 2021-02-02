@@ -57,7 +57,7 @@ img {
 
 .header-left .left-icons i,
 .header-right .right-icons i {
-    margin-left: 15px;
+    margin-left: 20px;
     font-size: 20px;
     color: #919191;
     cursor: pointer;
@@ -227,13 +227,24 @@ img {
 
 .right-box-message .right-messages .message {
     margin: 8px;
-    padding: 17px 25px 20px;
+    padding: 23px 30px 20px 20px;
     max-width: 55%;
     min-width: 40%;
     border-radius: 10px;
     font-size: 15px;
     position: relative;
     word-break: break-word;
+}
+
+.right-box-message .right-messages .message .user-sent{
+    color: #35cd96;
+}
+
+.right-box-message .right-messages .message h5{
+    position: absolute;
+    left: 3%;
+    top: 5%;
+    color: red;
 }
 
 .right-box-message .right-messages .message small {
@@ -265,6 +276,8 @@ img {
 }
 
 .right-input-message input {
+    outline: none;
+    border:none;
     padding: 20px;
     height: 50px;
     width: calc(100% - 60px - 50px);
