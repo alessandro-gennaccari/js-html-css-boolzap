@@ -390,7 +390,7 @@ var app = new Vue({
         serchContact(){
             this.contacts.filter((element) => {
 
-                if (element.name.toLowerCase().includes(this.searchName.toLowerCase())) {
+                if (element.name.toLowerCase().includes(this.searchName.trim().toLowerCase())) {
                     element.visibleUser = true;
                 } else {
                     element.visibleUser = false;
