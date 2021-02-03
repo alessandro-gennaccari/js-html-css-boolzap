@@ -18,6 +18,15 @@ var app = new Vue({
                 avatar: 'img/avatar_io.jpg'
             }
         ],
+        answers: [
+            'Tutto ok, come stai?',
+            'Cercamente, non preoccuparti.',
+            'Si, sarò puntuale.',
+            'No, non direi.',
+            'Scusa, ho il gatto che gioca nella lavatrice, ci sentiamo dopo.',
+            'Si, ti sei allenato oggi?',
+            'Ok, vedi che oggi la partita la vadiamo da me.'
+        ],
         // Con visible cercherò di far si che al click cambi e se true,
         // si vedranno i messaggi nella  Tab di destra
         contacts: [
@@ -300,6 +309,10 @@ var app = new Vue({
             });
         },
         sendNewMessage(){
+
+            const counter = Math.floor(Math.random() * (this.answers.length - 0 ));
+            const risposta = this.answers[counter];
+
             this.contacts.forEach((element) => {
 
                 if (element.visible == true) {
@@ -317,10 +330,14 @@ var app = new Vue({
                     }, 1000 );
 
                     setTimeout( function () {
+                        element.stato = 'Sta scrivendo...'
+                    }, 2000 );
+
+                    setTimeout( function () {
                         element.messages.push({
                             date: dayjs().format('DD / MM / YYYY'),
                             hour: dayjs().format('HH:mm'),
-                            text: 'Ok',
+                            text:  risposta,
                             status: 'received'
                         });
                     }, 2500 );
