@@ -43,25 +43,33 @@ var app = new Vue({
                         date: '02 / 02 / 2021',
                         hour: '15:32',
                         text: 'Hai portato a spasso il cane?',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '02 / 02 / 2021',
                         hour: '15:50',
                         text: 'Ricordati di dargli da mangiare.',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '02 / 02 / 2021',
                         hour: '16:32',
                         text: 'Tutto fatto!',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '02 / 02 / 2021',
                         hour: '16:36',
                         text: 'Grandioso, tra due ore sono a casa.',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
+                        moreInfo: 'none'
                     }
                 ]
             },
@@ -77,19 +85,22 @@ var app = new Vue({
                         date: '20 / 01 / 2021',
                         hour: '16:30',
                         text: 'Ciao come stai?',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     },
                     {
                         date: '20 / 01 / 2021',
                         hour: '16:30',
                         text: 'Bene grazie! Stasera ci vediamo?',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     },
                     {
                         date: '20 / 01 / 2021',
                         hour: '16:35',
                         text: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                        status: 'sent' 
+                        status: 'sent',
+                        menuMessage: 'none',
                     }
                 ]
             },
@@ -105,19 +116,22 @@ var app = new Vue({
                         date: '28 / 01 / 2021',
                         hour: '10:10',
                         text: 'La Marianna va in campagna',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     },
                     {
                         date: '28 / 01 / 2021',
                         hour: '10:21',
                         text: 'Sicuro di non aver sbagliato chat?',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     },
                     {
                         date: '28 / 01 / 2021',
                         hour: '16:15',
                         text: 'Ah scusa!',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     }
 
                 ]
@@ -134,13 +148,15 @@ var app = new Vue({
                         date: '10 / 01 / 2021',
                         hour: '15:30',
                         text: 'Lo sai che ha aperto una nuova pizzeria?',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     },
                     {
                         date: '10 / 01 / 2021',
                         hour: '15:50',
                         text: 'Si, ma preferirei andare al cinema',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     }
                 ]
             },
@@ -156,31 +172,36 @@ var app = new Vue({
                         date: '09 / 01 / 2021',
                         hour: '12:30',
                         text: 'Hai provato il gelato della nuova gelateria, quella in corso Pippo?',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     },
                     {
                         date: '09 / 01 / 2021',
                         hour: '15:50',
                         text: 'Si, devo dire che non è per nulla buono.',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     },
                     {
                         date: '09 / 01 / 2021',
                         hour: '18:12',
                         text: 'Caspita, eppure da come appare esteticamente fa un figurone.',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     },
                     {
                         date: '09 / 01 / 2021',
                         hour: '18:54',
                         text: 'Non sempre i prodotto sono lo specchio del locale.',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     },
                     {
                         date: '09 / 01 / 2021',
                         hour: '20:24',
                         text: 'Già, allora lo prendo dalla solita gelateria.',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     }
                 ]
             },
@@ -196,19 +217,22 @@ var app = new Vue({
                         date: '08 / 01 / 2021',
                         hour: '08:30',
                         text: 'Buongiorno Samanta, non dimenticare che oggi pranziamo insieme!!',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     },
                     {
                         date: '08 / 01 / 2021',
                         hour: '09:53',
                         text: 'Certamente, me lo ricordo benissimo.',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     },
                     {
                         date: '08 / 01 / 2021',
                         hour: '12:11',
                         text: 'Perfetto, allora ci vediamo alle 13:30 al ristorante',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     }
                 ]
             },
@@ -224,19 +248,22 @@ var app = new Vue({
                         date: '07 / 01 / 2021',
                         hour: '12:30',
                         text: 'Ho finalmente, trovato la bici che agoniavo da tanto!',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     },
                     {
                         date: '07 / 01 / 2021',
                         hour: '17:53',
                         text: 'Ovviamnte comrpata subitissimo.',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     },
                     {
                         date: '07 / 01 / 2021',
                         hour: '19:11',
                         text: 'Ma sei un grande, organizziamo subito un percorso per domenica.',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     }
                 ]
             },
@@ -252,43 +279,50 @@ var app = new Vue({
                         date: '05 / 01 / 2021',
                         hour: '16:12',
                         text: 'Stasera allenamento alle 19??',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     },
                     {
                         date: '05 / 01 / 2021',
                         hour: '16:22',
                         text: 'Fammi sapere quanto prima che ci organizziamo per il passaggio.',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     },
                     {
                         date: '05 / 01 / 2021',
                         hour: '16:23',
                         text: 'Se non hai la macchina ti vengo a prendere io, tranquillamente.',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     },
                     {
                         date: '05 / 01 / 2021',
                         hour: '17:23',
                         text: 'Nessun problema, ti passo a prendere mezz\'ora prima ed andiamo',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     },
                     {
                         date: '05 / 01 / 2021',
                         hour: '17:33',
                         text: 'Perfetto, portati il cambio che la doccia la facciamo in palestra.',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     },
                     {
                         date: '05 / 01 / 2021',
                         hour: '17:41',
                         text: 'Va bene, poi ceniamo fuori imamgino.',
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     },
                     {
                         date: '05 / 01 / 2021',
                         hour: '18:04',
                         text: 'Si, ho gia prenotato in braceria!',
-                        status: 'received'
+                        status: 'received',
+                        menuMessage: 'none',
                     }
                 ]
             }
@@ -321,7 +355,8 @@ var app = new Vue({
                         date: dayjs().format('DD / MM / YYYY'),
                         hour: dayjs().format('HH:mm'),
                         text: this.newMessage,
-                        status: 'sent'
+                        status: 'sent',
+                        menuMessage: 'none',
                     });
 
                     this.newMessage = '';
@@ -339,7 +374,8 @@ var app = new Vue({
                             date: dayjs().format('DD / MM / YYYY'),
                             hour: dayjs().format('HH:mm'),
                             text:  risposta,
-                            status: 'received'
+                            status: 'received',
+                            menuMessage: 'none',
                         });
                     }, 2500 );
 
@@ -368,6 +404,26 @@ var app = new Vue({
                 this.dark = 'darkmode';
             } else {
                 this.dark = '';
+            }
+        },
+        messageMenu(i){
+            if(i.menuMessage == 'none') {
+                i.menuMessage = 'block';
+                setTimeout( function () {
+                    i.menuMessage = 'none'
+                }, 1500);
+            } else {
+                i.menuMessage = 'none';
+            }
+        },
+        deleteMessage(contact, index){
+            contact.messages.splice(index, 1);
+        },
+        seeInfo(i){
+            if(i.moreInfo == 'none') {
+                i.moreInfo = 'block';
+            } else {
+                i.moreInfo = 'none';
             }
         }
     }

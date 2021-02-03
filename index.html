@@ -157,12 +157,20 @@
     
                     <div class="right-messages" v-for="contact in contacts" v-if="contact.visible === true">
     
-                        <div v-for="message in contact.messages" :class="message.status" class="message">
+                        <div v-for="(message,index) in contact.messages" :class="message.status" class="message">
                             {{message.text}}
                             <h5 class="user-sent" v-if="message.status == 'sent'">Tu</h5>
                             <h5 v-if="message.status == 'received'">{{contact.name}}</h5>
+
+                            <small class="full-info" :class="message.moreInfo">{{message.date}}</small>
                             <small>{{message.hour}}</small>
-                            <i class="fas fa-chevron-down"></i>
+
+                            <i class="fas fa-chevron-down" @click="messageMenu(message)"></i>
+
+                            <ul class="options-menu" :class="message.menuMessage">
+                                <li @click="seeInfo(message)">Info messaggio</li>
+                                <li @click="deleteMessage(contact, index)">Cancella messaggio</li>
+                            </ul>
                         </div>
                         
                     </div>
