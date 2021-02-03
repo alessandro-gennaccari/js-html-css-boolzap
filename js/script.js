@@ -87,6 +87,7 @@ var app = new Vue({
                         text: 'Ciao come stai?',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '20 / 01 / 2021',
@@ -94,6 +95,7 @@ var app = new Vue({
                         text: 'Bene grazie! Stasera ci vediamo?',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '20 / 01 / 2021',
@@ -101,6 +103,7 @@ var app = new Vue({
                         text: 'Mi piacerebbe ma devo andare a fare la spesa.',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     }
                 ]
             },
@@ -118,6 +121,7 @@ var app = new Vue({
                         text: 'La Marianna va in campagna',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '28 / 01 / 2021',
@@ -125,6 +129,7 @@ var app = new Vue({
                         text: 'Sicuro di non aver sbagliato chat?',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '28 / 01 / 2021',
@@ -132,6 +137,7 @@ var app = new Vue({
                         text: 'Ah scusa!',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     }
 
                 ]
@@ -150,6 +156,7 @@ var app = new Vue({
                         text: 'Lo sai che ha aperto una nuova pizzeria?',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '10 / 01 / 2021',
@@ -157,6 +164,7 @@ var app = new Vue({
                         text: 'Si, ma preferirei andare al cinema',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     }
                 ]
             },
@@ -174,6 +182,7 @@ var app = new Vue({
                         text: 'Hai provato il gelato della nuova gelateria, quella in corso Pippo?',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '09 / 01 / 2021',
@@ -181,6 +190,7 @@ var app = new Vue({
                         text: 'Si, devo dire che non è per nulla buono.',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '09 / 01 / 2021',
@@ -188,6 +198,7 @@ var app = new Vue({
                         text: 'Caspita, eppure da come appare esteticamente fa un figurone.',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '09 / 01 / 2021',
@@ -195,6 +206,7 @@ var app = new Vue({
                         text: 'Non sempre i prodotto sono lo specchio del locale.',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '09 / 01 / 2021',
@@ -202,6 +214,7 @@ var app = new Vue({
                         text: 'Già, allora lo prendo dalla solita gelateria.',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     }
                 ]
             },
@@ -219,6 +232,7 @@ var app = new Vue({
                         text: 'Buongiorno Samanta, non dimenticare che oggi pranziamo insieme!!',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '08 / 01 / 2021',
@@ -226,6 +240,7 @@ var app = new Vue({
                         text: 'Certamente, me lo ricordo benissimo.',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '08 / 01 / 2021',
@@ -233,6 +248,7 @@ var app = new Vue({
                         text: 'Perfetto, allora ci vediamo alle 13:30 al ristorante',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     }
                 ]
             },
@@ -250,6 +266,7 @@ var app = new Vue({
                         text: 'Ho finalmente, trovato la bici che agoniavo da tanto!',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '07 / 01 / 2021',
@@ -257,6 +274,7 @@ var app = new Vue({
                         text: 'Ovviamnte comrpata subitissimo.',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '07 / 01 / 2021',
@@ -264,6 +282,7 @@ var app = new Vue({
                         text: 'Ma sei un grande, organizziamo subito un percorso per domenica.',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     }
                 ]
             },
@@ -281,6 +300,7 @@ var app = new Vue({
                         text: 'Stasera allenamento alle 19??',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '05 / 01 / 2021',
@@ -288,6 +308,7 @@ var app = new Vue({
                         text: 'Fammi sapere quanto prima che ci organizziamo per il passaggio.',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '05 / 01 / 2021',
@@ -295,6 +316,7 @@ var app = new Vue({
                         text: 'Se non hai la macchina ti vengo a prendere io, tranquillamente.',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '05 / 01 / 2021',
@@ -302,6 +324,7 @@ var app = new Vue({
                         text: 'Nessun problema, ti passo a prendere mezz\'ora prima ed andiamo',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '05 / 01 / 2021',
@@ -309,6 +332,7 @@ var app = new Vue({
                         text: 'Perfetto, portati il cambio che la doccia la facciamo in palestra.',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '05 / 01 / 2021',
@@ -316,6 +340,7 @@ var app = new Vue({
                         text: 'Va bene, poi ceniamo fuori imamgino.',
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     },
                     {
                         date: '05 / 01 / 2021',
@@ -323,6 +348,7 @@ var app = new Vue({
                         text: 'Si, ho gia prenotato in braceria!',
                         status: 'received',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     }
                 ]
             }
@@ -357,6 +383,7 @@ var app = new Vue({
                         text: this.newMessage,
                         status: 'sent',
                         menuMessage: 'none',
+                        moreInfo: 'none'
                     });
 
                     this.newMessage = '';
@@ -376,6 +403,7 @@ var app = new Vue({
                             text:  risposta,
                             status: 'received',
                             menuMessage: 'none',
+                            moreInfo: 'none'
                         });
                     }, 2500 );
 
