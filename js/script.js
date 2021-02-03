@@ -19,6 +19,7 @@ var app = new Vue({
             }
         ],
         answers: [
+            'Ciaooo',
             'Tutto ok, come stai?',
             'Cercamente, non preoccuparti.',
             'Si, sarò puntuale.',
