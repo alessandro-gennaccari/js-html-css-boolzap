@@ -28,8 +28,7 @@ var app = new Vue({
             'Si, ti sei allenato oggi?',
             'Ok, vedi che oggi la partita la vadiamo da me.'
         ],
-        // Con visible cercherò di far si che al click cambi e se true,
-        // si vedranno i messaggi nella  Tab di destra
+        // Con visible al click, se true, si vedranno i messaggi nella  Tab di destra
         contacts: [
             {
                 name: 'Michele',
@@ -356,6 +355,7 @@ var app = new Vue({
         ]
     },
     methods: {
+        //Rende visibile la chat del contatto
         visibleChat(index) {
 
             let indice = this.contacts[index];
@@ -369,6 +369,7 @@ var app = new Vue({
                 }
             });
         },
+        // Invia il messaggio nella chat, cambia lo stato, ci invia una risposta
         sendNewMessage(){
 
             const counter = Math.floor(Math.random() * (this.answers.length - 0 ));
@@ -415,6 +416,7 @@ var app = new Vue({
 
             })
         },
+        // Ricerca del contatto tramite input
         serchContact(){
             this.contacts.filter((element) => {
 
@@ -427,6 +429,7 @@ var app = new Vue({
             });
     
         },
+        // Attiva e disattiva darkmode
         toggleDark(){
             if (this.dark == ''){
                 this.dark = 'darkmode';
@@ -434,6 +437,7 @@ var app = new Vue({
                 this.dark = '';
             }
         },
+        // Fa apparire la finestra a tendina
         messageMenu(i){
             if(i.menuMessage == 'none') {
                 i.menuMessage = 'block';
@@ -444,9 +448,11 @@ var app = new Vue({
                 i.menuMessage = 'none';
             }
         },
+        // Cancella il messaggio
         deleteMessage(contact, index){
             contact.messages.splice(index, 1);
         },
+        //Fa apparire la data come informazione in più al messaggio
         seeInfo(i){
             if(i.moreInfo == 'none') {
                 i.moreInfo = 'block';
